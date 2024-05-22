@@ -1,3 +1,10 @@
+/*
+Project 1B: Camille, James, & Sebastian
+
+This file contains the definition of the Response class
+It contains all of the functions that are implemented in the Response.cpp file
+*/
+
 #ifndef RESPONSE_H
 #define RESPONSE_H
 
