@@ -1,3 +1,10 @@
+/*
+Project 1B: Camille, James, & Sebastian
+
+This file contains the definition of the Code class
+It contains the function definitions of what's implemented in the Code.cpp file
+*/
+
 #ifndef CODE_H
 #define CODE_H
 
