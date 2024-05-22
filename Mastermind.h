@@ -1,3 +1,10 @@
+/*
+Project 1B: Camille, James, & Sebastian
+
+This file contains the definition of the Mastermind CLass which handles the playing of the game
+The file just contains each function that is implemented in the Mastermind.cpp file
+*/
+
 #ifndef MASTERMIND_H
 #define MASTERMIND_H
 
