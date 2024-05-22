@@ -33,8 +33,7 @@ int main() {
         break;
     }
 
-    Mastermind game(n, m);
-    game.playGame();
-
+    Mastermind game(n, m); // initialize mastermind object
+    game.playGame(); // call playGame
     return 0;
 }
