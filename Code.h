@@ -8,25 +8,16 @@ using namespace std;
 
 class Code {
 private:
-    vector<int> secret_code;
-    int n; // length
-    int m; // range
+    vector<int> secretCode;
+    int nVal, mVal;
 
 public:
-    Code(int n, int m); // constructor
-    Code(const vector<int>& guess); // additional constructor for guesses
-
-    void initialize_randomly(); // the function that initializes the secret code
-
-    int check_correct(const vector<int>& guess) const; // check correct function passing only the guess as a parameter
-
-    int check_incorrect(const vector<int>& guess) const; // check incorrect function
-
-    void print_secret_code() const; // function to print the secret code
-
-    int getLength() const; // function to get the length of the code
-
-    const vector<int>& getSecretCode() const; // function to get the secret code
+    Code(int n, int m);                                 //constructor for a new, random code
+    Code(int n, int m, vector<int> preexistingValues);  //constructor for a preexisting/guess code
+    void initializeRandom();
+    void printSecretCode() const;
+    int checkCorrect(const Code& guess);
+    int checkIncorrect(const Code& guess);
 };
 
 #endif // CODE_H

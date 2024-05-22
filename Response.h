@@ -7,23 +7,17 @@ using namespace std;
 
 class Response {
 private:
-    int correct;
-    int incorrect;
+    int numCorrect;
+    int numIncorrect;
 
 public:
-    Response(int correct = 0, int incorrect = 0); // constructor
-
-    void setCorrect(int c); // set correct value
-
-    void setIncorrect(int ic); // set incorrect value
-
-    int getCorrect() const; // get correct value
-
-    int getIncorrect() const; // get incorrect value
-
-    bool operator==(const Response& other) const; // overload == operator
-
-    friend ostream& operator<<(ostream& os, const Response& response); // overload << operator
+    Response(int correct = 0, int incorrect = 0);   // Response constructor with default values of 0
+    int getNumCorrect() const;                      // returns number of correct digits
+    int getNumIncorrect() const;                    // returns number of misplaced digits
+    void setNumCorrect(int c);                      // sets number of correct digits to arg c
+    void setNumIncorrect(int i);                    // sets number of incorrect digits to arg i
+    bool operator==(const Response& other) const;   // overloaded == operator 
+    friend ostream& operator<<(ostream& os, const Response& response);
 };
 
 #endif // RESPONSE_H

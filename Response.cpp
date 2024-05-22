@@ -1,31 +1,34 @@
 #include "Response.h"
 
-Response::Response(int correct, int incorrect) {
-    this->correct = correct;
-    this->incorrect = incorrect;
+Response::Response(int correct, int incorrect) : numCorrect(correct), numIncorrect(incorrect) {
+    // Initializes numCorrect and numIncorrect
 }
 
-void Response::setCorrect(int c) {
-    correct = c;
+int Response::getNumCorrect() const {
+    return numCorrect;
 }
 
-void Response::setIncorrect(int ic) {
-    incorrect = ic;
+int Response::getNumIncorrect() const {
+    return numIncorrect;
 }
 
-int Response::getCorrect() const {
-    return correct;
+void Response::setNumCorrect(int c) {
+    numCorrect = c;
 }
 
-int Response::getIncorrect() const {
-    return incorrect;
+void Response::setNumIncorrect(int i) {
+    numIncorrect = i;
 }
 
 bool Response::operator==(const Response& other) const {
-    return (correct == other.correct && incorrect == other.incorrect);
+    //  Compares numCorrect and numIncorrect between this Response and the other
+        return ((getNumCorrect() == other.getNumCorrect()) &&
+            (getNumIncorrect() == other.getNumIncorrect()));
 }
 
 ostream& operator<<(ostream& os, const Response& response) {
-    os << "Correct: " << response.correct << ", Incorrect: " << response.incorrect;
+    // Prints the response in the format "Correct: X, Incorrect: Y"
+    os << "Correct: " << response.getNumCorrect()
+        << ", Incorrect: " << response.getNumIncorrect();
     return os;
 }
